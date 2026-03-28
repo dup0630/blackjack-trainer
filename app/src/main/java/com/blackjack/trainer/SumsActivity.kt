@@ -48,7 +48,7 @@ class SumsActivity : AppCompatActivity() {
             if (i > 0) ssb.append("   ")
             val start = ssb.length
             ssb.append(card.toString())
-            val color = if (card.isRed) Color.RED else Color.WHITE
+            val color = if (card.isRed) Color.RED else Color.BLACK
             ssb.setSpan(ForegroundColorSpan(color), start, ssb.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
             ssb.setSpan(RelativeSizeSpan(1.4f), start, ssb.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         }

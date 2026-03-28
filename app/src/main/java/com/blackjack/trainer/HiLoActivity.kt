@@ -65,7 +65,7 @@ class HiLoActivity : AppCompatActivity() {
 
     private fun displayCard(card: Card) {
         val ssb = SpannableStringBuilder(card.toString())
-        val color = if (card.isRed) Color.RED else Color.WHITE
+        val color = if (card.isRed) Color.RED else Color.BLACK
         ssb.setSpan(ForegroundColorSpan(color), 0, ssb.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         ssb.setSpan(RelativeSizeSpan(2.5f), 0, ssb.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         findViewById<TextView>(R.id.tvCurrentCard).text = ssb
