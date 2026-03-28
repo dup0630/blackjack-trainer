@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p C:/Users/DiegoUrdapilletadela/local/AITools/black_jack_app/app/src/main/java/com/blackjack/trainer)",
+      "Bash(mkdir -p C:/Users/DiegoUrdapilletadela/local/AITools/black_jack_app/app/src/main/res/layout)",
+      "Bash(mkdir -p C:/Users/DiegoUrdapilletadela/local/AITools/black_jack_app/app/src/main/res/values)",
+      "Bash(mkdir -p C:/Users/DiegoUrdapilletadela/local/AITools/black_jack_app/app/src/main/res/drawable)",
+      "Bash(mkdir -p C:/Users/DiegoUrdapilletadela/local/AITools/black_jack_app/gradle/wrapper)"
+    ]
+  }
+}

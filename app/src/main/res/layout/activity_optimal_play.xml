@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/casino_green">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Optimal Play"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/gold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score: 0/0 (0%)"
+            android:textSize="14sp"
+            android:textColor="@color/text_light"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Dealer upcard -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dealer shows:"
+            android:textSize="15sp"
+            android:textColor="@color/text_light"
+            android:layout_marginBottom="6dp"/>
+
+        <LinearLayout
+            android:layout_width="72dp"
+            android:layout_height="90dp"
+            android:gravity="center"
+            android:background="@drawable/card_background"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/tvDealerCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#222222"/>
+        </LinearLayout>
+
+        <!-- Player hand -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your hand:"
+            android:textSize="15sp"
+            android:textColor="@color/text_light"
+            android:layout_marginBottom="6dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:gravity="center"
+            android:background="@drawable/card_background"
+            android:layout_marginBottom="6dp">
+
+            <TextView
+                android:id="@+id/tvPlayerHand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#222222"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvHandLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            android:textColor="@color/gold"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Action buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:id="@+id/btnHit"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="Hit"
+                android:textSize="16sp"
+                android:textColor="@color/gold"
+                android:backgroundTint="@color/button_dark"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/btnStand"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="Stand"
+                android:textSize="16sp"
+                android:textColor="@color/gold"
+                android:backgroundTint="@color/button_dark"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btnDouble"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="Double"
+                android:textSize="16sp"
+                android:textColor="@color/gold"
+                android:backgroundTint="@color/button_dark"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/btnSplit"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="Split"
+                android:textSize="16sp"
+                android:textColor="@color/gold"
+                android:backgroundTint="@color/button_dark"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text=""
+            android:padding="8dp"/>
+
+    </LinearLayout>
+</ScrollView>

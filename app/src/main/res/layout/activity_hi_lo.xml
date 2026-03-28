@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/casino_green">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi-Lo Count"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/gold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score: 0/0 (0%)"
+            android:textSize="14sp"
+            android:textColor="@color/text_light"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvDeckInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cards dealt: 0  |  Remaining: 52"
+            android:textSize="13sp"
+            android:textColor="@color/text_light"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Reference legend -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2–6: +1"
+                android:textSize="13sp"
+                android:textColor="@color/correct_green"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7–9: 0"
+                android:textSize="13sp"
+                android:textColor="#FFFF88"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10–A: -1"
+                android:textSize="13sp"
+                android:textColor="@color/wrong_red"/>
+        </LinearLayout>
+
+        <!-- Current card display -->
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:background="@drawable/card_background"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/tvCurrentCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="?"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:textColor="#222222"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvCountHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tvRecentCards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recent: —"
+            android:textSize="13sp"
+            android:textColor="@color/text_light"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deal cards and track the running count."
+            android:textSize="15sp"
+            android:textColor="@color/text_light"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Next card button -->
+        <Button
+            android:id="@+id/btnNextCard"
+            android:layout_width="200dp"
+            android:layout_height="56dp"
+            android:text="Next Card"
+            android:textSize="18sp"
+            android:textColor="@color/gold"
+            android:backgroundTint="@color/button_dark"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Count guess input (shown every 5 cards) -->
+        <LinearLayout
+            android:id="@+id/layoutGuess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etCountGuess"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:hint="Running count"
+                android:textColorHint="#AAAAAA"
+                android:textColor="@color/gold"
+                android:textSize="22sp"
+                android:inputType="numberSigned"
+                android:gravity="center"
+                android:backgroundTint="@color/gold"
+                android:layout_marginBottom="12dp"/>
+
+            <Button
+                android:id="@+id/btnSubmitCount"
+                android:layout_width="200dp"
+                android:layout_height="56dp"
+                android:text="Submit Count"
+                android:textSize="18sp"
+                android:textColor="@color/gold"
+                android:backgroundTint="@color/button_dark"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text=""
+            android:layout_marginTop="16dp"
+            android:padding="8dp"/>
+
+    </LinearLayout>
+</ScrollView>
